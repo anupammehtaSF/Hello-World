@@ -46,16 +46,7 @@ executePipeline(envDef) {
         }
     }
     
-    if(BuildUtils.isReleaseBuild(env)) {
-        stage('Stage for Production') {
-            mavenDockerP2PStage([])
-        }
-    }
-    
-    if(BuildUtils.isReleaseBuild(env)) {
-        stage('Promote to Release Candidate') {
-            // copy_docker_artifacts_to_gcp_repo flag here will control weather your artifact should be copied to gcp repo as well
-            mavenDockerP2PPromote([copy_docker_artifacts_to_gcp_repo : true])
-        }
+    stage('test'){
+        sh 'docker images'
     }
 }
