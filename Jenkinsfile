@@ -27,10 +27,8 @@ executePipeline(envDef) {
     stage('test'){
         sh 'docker -H tcp://localhost:2375 ps'
         sh 'ls -al /'
-        sh 'ls -al /home/jenkins'
-        sh 'cat /proc/mounts'
-        sh 'ls -al /var'
-        sh 'cat /etc/hosts'
+        sh 'ls -al /etc/pki_service'
+      
         
        
     }
