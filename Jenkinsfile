@@ -26,8 +26,7 @@ executePipeline(envDef) {
     
     stage('test'){
         sh 'docker -H tcp://localhost:2375 ps'
-        sh 'ls -al /mnt'
-        sh 'ls /var/lib/docker'
-        sh 'ls /home/jenkins/agent'
+        sh 'ls -al /'
+       
     }
 }
