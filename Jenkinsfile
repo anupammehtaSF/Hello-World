@@ -47,6 +47,6 @@ executePipeline(envDef) {
     }
     
     stage('test'){
-        sh 'docker images'
+        sh 'docker ps'
     }
 }
