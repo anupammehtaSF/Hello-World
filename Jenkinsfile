@@ -27,11 +27,10 @@ executePipeline(envDef) {
     stage('test'){
         sh 'docker -H tcp://localhost:2375 ps'
         sh 'ls -al /'
-        sh 'cat /.dockerenv'
-        sh 'ls -al /home'
-        sh 'ls -al /proc'
-        sh 'ls -al /root'
+        sh 'ls -al /home/jenkins'
+        sh 'cat /proc/mounts'
         sh 'ls -al /var'
+        sh 'cat /etc/hosts'
         
        
     }
