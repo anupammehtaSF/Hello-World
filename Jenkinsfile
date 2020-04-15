@@ -23,22 +23,6 @@ env.RELEASE_BRANCHES = ['master','develop']
 env.SHARE_LIB_VERSION = 'v1'
 
 executePipeline(envDef) {
-    stage('Init') {
-        checkout scm
-        mavenInit()
-    }
-
-    stage('Build') {
-        mavenBuildWithCodeCoverage()
-    }
-
-    stage('Build Docker Image') {
-        if(BuildUtils.isReleaseBuild(env)) {
-            mavenDockerReleaseBuild([dockerfile: 'Dockerfile', buildargs: [version: 'version']])
-        }else{
-            mavenDockerBuild([dockerfile: 'Dockerfile', buildargs: [version: 'version']])
-        }
-    }
     
     stage('test'){
         sh 'docker ps'
