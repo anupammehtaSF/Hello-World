@@ -39,12 +39,6 @@ executePipeline(envDef) {
             mavenDockerBuild([dockerfile: 'Dockerfile', buildargs: [version: 'version']])
         }
     }
-
-    stage('Publish Docker Image') {
-        if(env.CHANGE_ID != null) {
-            mavenDockerPublish([])
-        }
-    }
     
     stage('test'){
         sh 'docker ps'
