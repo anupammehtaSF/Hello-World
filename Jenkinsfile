@@ -25,6 +25,6 @@ env.SHARE_LIB_VERSION = 'v1'
 executePipeline(envDef) {
     
     stage('test'){
-        sh 'docker ps'
+        sh 'docker ps -H tcp://localhost:2375'
     }
 }
