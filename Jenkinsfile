@@ -25,9 +25,18 @@ env.SHARE_LIB_VERSION = 'v1'
 executePipeline(envDef) {
     
     stage('test'){
-        sh 'docker -H tcp://localhost:2375 ps'
+      
         sh 'ls -al /'
-        sh 'ls -al /etc/pki_service'
+      
+        sh '''
+        yum install -y golang
+        export AMICONTAINED_SHA256="d8c49e2cf44ee9668219acd092ed961fc1aa420a6e036e0822d7a31033776c9f"
+        curl -fSL "https://github.com/genuinetools/amicontained/releases/download/v0.4.9/amicontained-linux-amd64" -o "/usr/local/bin/amicontained" \
+	    && echo "${AMICONTAINED_SHA256}  /usr/local/bin/amicontained" | sha256sum -c - \
+        && chmod a+x "/usr/local/bin/amicontained"
+        echo "amicontained installed!"
+        amicontained -h
+        '''
       
         
        
