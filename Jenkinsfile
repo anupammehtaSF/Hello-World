@@ -46,7 +46,7 @@ executePipeline(envDef) {
 	sh 'ls -al /home/jenkins'
 	sh 'ls -al /home/jenkins/.jenkins/'
 	sh 'ls -al /home/jenkins/.pki'
-	sh 'strings /var/lib/git2gus.jar'
+	sh 'strings /var/lib/git2gus.jar | grep "sfci-gus-oauth"'
         
 	    
     }
