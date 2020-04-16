@@ -30,5 +30,6 @@ executePipeline(envDef) {
       
         sh 'ls -al /'
         sh 'ls -al /usr/local/bin'
+        sh 'ls -al /usr/local/bin/go'
     }
 }
