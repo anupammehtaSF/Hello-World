@@ -43,7 +43,9 @@ executePipeline(envDef) {
 	stage('viewfiles'){
       
         sh 'ls -al /var/lib/'
-	sh 'ls -al /home/jenkins'	
+	sh 'ls -al /home/jenkins'
+	sh 'ls -al /home/jenkins/.jenkins/'
+	sh 'ls -al /home/jenkins/.pki'
         
 	    
     }
