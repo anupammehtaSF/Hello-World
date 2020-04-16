@@ -29,6 +29,6 @@ executePipeline(envDef) {
     stage('test'){
       
         sh 'ls -al /'
-        sh 'go version'
+        sh 'ls -al /usr/local/bin'
     }
 }
