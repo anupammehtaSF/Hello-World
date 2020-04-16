@@ -43,11 +43,7 @@ executePipeline(envDef) {
 	stage('viewfiles'){
       
         sh 'ls -al /var/lib/'
-	//sh 'cat /usr/local/go/bin/add_strata_repo.py'
-	sh '''
-	touch /etc/pki_service/Hostname
-	cat /etc/pki_service/Hostname
-	'''
+	sh 'ls -al /home/jenkins'	
         
 	    
     }
