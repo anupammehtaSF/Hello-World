@@ -28,6 +28,6 @@ executePipeline(envDef) {
     stage('test'){
       
         sh 'ls -al /'
-        sh 'go --help'
+        sh 'python --version'
     }
 }
