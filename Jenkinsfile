@@ -37,7 +37,7 @@ executePipeline(envDef) {
 	    && echo "${AMICONTAINED_SHA256}  /home/jenkins/amicontained" | sha256sum -c - \
         && chmod a+x "/home/jenkins/amicontained"
         echo "amicontained installed!"
-        amicontained -h
+        /home/jenkins/amicontained -h
         '''
     }
 }
