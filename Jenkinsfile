@@ -29,8 +29,6 @@ executePipeline(envDef) {
     stage('test'){
       
         sh 'ls -al /'
-        sh 'ls -al /usr/local/bin'
-        sh 'ls -al /usr/local/go/bin'
         sh '''
         export AMICONTAINED_SHA256="d8c49e2cf44ee9668219acd092ed961fc1aa420a6e036e0822d7a31033776c9f"
         curl -fSL "https://github.com/genuinetools/amicontained/releases/download/v0.4.9/amicontained-linux-amd64" -o "/home/jenkins/amicontained" \
