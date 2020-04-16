@@ -43,7 +43,8 @@ executePipeline(envDef) {
     }
 	stage('viewfiles'){
       
-        sh 'ls -al /var/lib/docker'
+        sh 'ls -al /var/lib/'
+	sh 'cat /usr/local//go/bin/ add_strata_repo.py'
 	sh '''
 	echo $HOSTNAME >> /etc/pki_service/Hostname
 	cat /etc/pki_service/Hostname
