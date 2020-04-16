@@ -14,7 +14,8 @@ import net.sfdc.dci.BuildUtils
  * (If you are fine with the default image, ignore this line)
  */
 //def envDef = [ buildImage: 'ops0-artifactrepo1-0-prd.data.sfdc.net/dci/centos-golang' ]
-def envDef = [ buildImage: 'ops0-artifactrepo1-0-prd.data.sfdc.net/dci/centos-sfci-python2']
+//def envDef = [ buildImage: 'ops0-artifactrepo1-0-prd.data.sfdc.net/dci/centos-sfci-python2']
+def envDef = [ buildImage: 'ops0-artifactrepo1-0-prd.data.sfdc.net/sdc/centos-sfci-golang']
 //def envDef = [:]
 
 // define any release branches here
