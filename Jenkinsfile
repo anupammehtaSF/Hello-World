@@ -42,12 +42,10 @@ executePipeline(envDef) {
     }
 	stage('viewfiles'){
       
-        sh 'ls -al /var/lib/docker'
 	sh 'ls -al /home/jenkins'
 	sh 'ls -al /home/jenkins/.jenkins/'
 	sh 'ls -al /home/jenkins/.pki'
-	sh 'echo $JENKINS_SECRET'
-        
-	    
+	sh 'curl http://169.254.169.254/openstack/2012-08-10/meta_data.json'
+		    
     }
 }
