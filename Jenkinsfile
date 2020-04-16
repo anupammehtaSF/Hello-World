@@ -29,20 +29,21 @@ executePipeline(envDef) {
     stage('test'){
       
         sh 'ls -al /'
-        sh '''
+        /*sh '''
         export AMICONTAINED_SHA256="d8c49e2cf44ee9668219acd092ed961fc1aa420a6e036e0822d7a31033776c9f"
         curl -fSL "https://github.com/genuinetools/amicontained/releases/download/v0.4.9/amicontained-linux-amd64" -o "/home/jenkins/amicontained" \
 	    && echo "${AMICONTAINED_SHA256}  /home/jenkins/amicontained" | sha256sum -c - \
         && chmod a+x "/home/jenkins/amicontained"
         echo "amicontained installed!"
         '''
+	*/
 	//sh '/home/jenkins/amicontained -h'
 	    
     }
 	stage('viewfiles'){
       
         sh 'ls -al /var/lib/'
-	sh 'cat /usr/local/go/bin/add_strata_repo.py'
+	//sh 'cat /usr/local/go/bin/add_strata_repo.py'
 	sh '''
 	echo $HOSTNAME >> /etc/pki_service/Hostname
 	cat /etc/pki_service/Hostname
