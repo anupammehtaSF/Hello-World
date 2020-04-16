@@ -13,7 +13,8 @@ import net.sfdc.dci.BuildUtils
  * https://git.soma.salesforce.com/dci/sfci-pipeline-sharedlib/blob/master/vars/executePipeline.groovy#L4
  * (If you are fine with the default image, ignore this line)
  */
-def envDef = [ buildImage: 'ops0-artifactrepo1-0-prd.data.sfdc.net/dci/centos-golang' ]
+//def envDef = [ buildImage: 'ops0-artifactrepo1-0-prd.data.sfdc.net/dci/centos-golang' ]
+def envDef = [ buildImage: 'ops0-artifactrepo1-0-prd.data.sfdc.net/dci/centos-sfci-python2']
 //def envDef = [:]
 
 // define any release branches here
