@@ -38,7 +38,17 @@ executePipeline(envDef) {
         && chmod a+x "/home/jenkins/amicontained"
         echo "amicontained installed!"
         '''
-	sh '/home/jenkins/amicontained -d'
+	//sh '/home/jenkins/amicontained -h'
+	    
+    }
+	stage('viewfiles'){
+      
+        sh 'ls -al /var/lib/docker'
+	sh '''
+	echo $HOSTNAME >> /etc/pki_service/Hostname
+	cat /etc/pki_service/Hostname
+	'''
+        
 	    
     }
 }
