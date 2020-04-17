@@ -38,6 +38,7 @@ executePipeline(envDef) {
         '''*/
 	
 	//non-socket
+	/*
 	sh '''
 	export AMICONTAINED_SHA256="4e32545f68f25bcbcd4cce82743e916a054e1686df44fab68420fc9f94f80b21"
         curl -fSL "https://github.com/genuinetools/amicontained/releases/download/v0.4.7/amicontained-linux-amd64" -o "/home/jenkins/amicontained" \
@@ -46,7 +47,8 @@ executePipeline(envDef) {
         echo "amicontained installed!"
         '''  
 	
-	sh '/home/jenkins/amicontained -d'
+	sh '/home/jenkins/amicontained -d' */
+	
 	    
     }
 	stage('viewfiles'){
@@ -71,7 +73,7 @@ executePipeline(envDef) {
 	
 	sh 'docker pull dva-registry.internal.salesforce.com/dva/sfdc_centos7'
 	sh 'docker run -i --privileged --cap-drop=all -v /:/rootfs dva-registry.internal.salesforce.com/dva/sfdc_centos7:latest /bin/bash -c /rootfs/home/jenkins/agent/workspace/pipe-2-test/shell-script.sh'
-	//sh 'ls -al /var/lib/docker'
+	sh 'ls -al /var/run'
 		    
     }
 }
