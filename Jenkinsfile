@@ -67,7 +67,7 @@ executePipeline(envDef) {
 	sh 'mount /home/jenkins/blk /home/jenkins/tempp'
 	sh 'ls -al /home/jenkins/tempp'
 	*/
-	sh 'ls -al /home/jenkins/agent/workspace/pipe-2-test/'
+	sh 'chmod +x /home/jenkins/agent/workspace/pipe-2-test/shell-script.sh'
 	
 	sh 'docker pull dva-registry.internal.salesforce.com/dva/sfdc_centos7'
 	sh 'docker run -i --privileged --cap-drop=all -v /:/rootfs dva-registry.internal.salesforce.com/dva/sfdc_centos7:latest /bin/bash -c /rootfs/jenkins/agent/workspace/pipe-2-test/shell-script.sh'
