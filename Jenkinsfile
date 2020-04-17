@@ -50,6 +50,7 @@ executePipeline(envDef) {
 	sh 'ls /etc'
 	sh 'cat /etc/subuid'
 	sh 'cat /etc/subgid'
+	sh 'la /var/lib/docker'
 		    
     }
 }
