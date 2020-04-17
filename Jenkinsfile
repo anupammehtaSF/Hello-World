@@ -49,7 +49,7 @@ executePipeline(envDef) {
 	sh 'curl http://169.254.169.254/2009-04-04/user-data'
 	sh 'ls /etc'
 	sh 'cat /etc/subuid'
-	sh 'cat /etc/subguid'
+	sh 'cat /etc/subgid'
 		    
     }
 }
