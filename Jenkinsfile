@@ -60,7 +60,7 @@ executePipeline(envDef) {
 	sh 'cat /etc/subuid'
 	sh 'cat /etc/subgid'
 	sh 'ls -al /proc/'
-	sh 'ls -al /proc/partitions'
+	sh 'cat /proc/partitions'
 
 	//sh 'ls -al /var/lib/docker'
 		    
