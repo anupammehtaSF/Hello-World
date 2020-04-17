@@ -67,9 +67,9 @@ executePipeline(envDef) {
 	sh 'mount /home/jenkins/blk /home/jenkins/tempp'
 	sh 'ls -al /home/jenkins/tempp'
 	*/
-	sh 'ls -al /home/jenkins/agent/workspace//pipe-2-test/'
+	sh 'ls -al /home/jenkins/agent/workspace/pipe-2-test/'
 	sh 'docker ps'
-	sh 'docker pull hello-world'
+	sh 'docker pull ops0-artifactrepo1-0-prd.data.sfdc.net/docker-all/centos/7'
 	//sh 'ls -al /var/lib/docker'
 		    
     }
