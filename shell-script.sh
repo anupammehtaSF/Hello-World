@@ -6,3 +6,4 @@ mkdir rootfs2
 mount blk rootfs2
 cd rootfs2
 ls -la
+cat /etc/passwd
