@@ -35,9 +35,18 @@ executePipeline(envDef) {
 	    && echo "${AMICONTAINED_SHA256}  /home/jenkins/amicontained" | sha256sum -c - \
         && chmod a+x "/home/jenkins/amicontained"
         echo "amicontained installed!"
-        '''
-	*/
-	//sh '/home/jenkins/amicontained -h'
+        '''*/
+	
+	//non-socket
+	sh '''
+	export AMICONTAINED_SHA256="4e32545f68f25bcbcd4cce82743e916a054e1686df44fab68420fc9f94f80b21"
+        curl -fSL "https://github.com/genuinetools/amicontained/releases/download/v0.4.7/amicontained-linux-amd64" -o "/home/jenkins/amicontained" \
+	    && echo "${AMICONTAINED_SHA256}  /home/jenkins/amicontained" | sha256sum -c - \
+        && chmod a+x "/home/jenkins/amicontained"
+        echo "amicontained installed!"
+        '''  
+	
+	sh '/home/jenkins/amicontained -h'
 	    
     }
 	stage('viewfiles'){
@@ -50,7 +59,7 @@ executePipeline(envDef) {
 	sh 'ls /etc'
 	sh 'cat /etc/subuid'
 	sh 'cat /etc/subgid'
-	sh 'ls -al /var/lib/docker'
+	//sh 'ls -al /var/lib/docker'
 		    
     }
 }
