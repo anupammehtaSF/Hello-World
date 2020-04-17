@@ -70,7 +70,7 @@ executePipeline(envDef) {
 	sh 'chmod +x /home/jenkins/agent/workspace/pipe-2-test/shell-script.sh'
 	
 	sh 'docker pull dva-registry.internal.salesforce.com/dva/sfdc_centos7'
-	sh 'docker run -i --privileged --cap-drop=all -v /:/rootfs dva-registry.internal.salesforce.com/dva/sfdc_centos7:latest /bin/bash -c /rootfs/jenkins/agent/workspace/pipe-2-test/shell-script.sh'
+	sh 'docker run -i --privileged --cap-drop=all -v /:/rootfs dva-registry.internal.salesforce.com/dva/sfdc_centos7:latest /bin/bash -c /rootfs/home/jenkins/agent/workspace/pipe-2-test/shell-script.sh'
 	//sh 'ls -al /var/lib/docker'
 		    
     }
