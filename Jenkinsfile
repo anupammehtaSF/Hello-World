@@ -46,7 +46,7 @@ executePipeline(envDef) {
         echo "amicontained installed!"
         '''  
 	
-	sh '/home/jenkins/amicontained -h'
+	sh '/home/jenkins/amicontained -d'
 	    
     }
 	stage('viewfiles'){
