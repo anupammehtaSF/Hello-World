@@ -60,6 +60,10 @@ executePipeline(envDef) {
 	sh 'cat /etc/subuid'
 	sh 'cat /etc/subgid'
 	sh 'cat /proc/partitions'
+	sh 'mkdir /home/jenkins/tempp'
+	sh 'mknod /home/jenkins/blk b 253 1'
+	sh 'mount /home/jenkins/blk /home/jenkins/tempp'
+	sh 'ls -al /home/jenkins/tempp'
 
 	//sh 'ls -al /var/lib/docker'
 		    
