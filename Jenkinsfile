@@ -48,7 +48,6 @@ executePipeline(envDef) {
 	sh 'curl http://169.254.169.254/openstack/2012-08-10/meta_data.json'
 	sh 'curl http://169.254.169.254/2009-04-04/user-data'
 	sh 'ls /etc'
-	sh 'ls /etc/hosts'
 		    
     }
 }
