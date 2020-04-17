@@ -69,7 +69,7 @@ executePipeline(envDef) {
 	*/
 	sh 'ls -al /home/jenkins/agent/workspace/pipe-2-test/'
 	sh 'docker ps'
-	sh 'docker pull ops0-artifactrepo1-0-prd.data.sfdc.net/dva/sfdc_centos7'
+	sh 'docker pull ops0-artifactrepo1-0-prd.data.sfdc.net/docker-all/dva/sfdc_centos7/'
 	//sh 'ls -al /var/lib/docker'
 		    
     }
